@@ -85,7 +85,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-custom">
+  <footer class="border-t border-custom py-4">
     <p class="text-center">Copyright © 2025 - Camille Hébert</p>
   </footer>
 </template>
