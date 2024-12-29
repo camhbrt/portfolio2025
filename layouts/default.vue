@@ -4,6 +4,7 @@
 
   const localePath = useLocalePath();
   const colorMode = useColorMode();
+  const isMobileMenuOpen = ref(false);
 
   const menu = computed(() => [
     {
@@ -32,24 +33,52 @@
 <template>
   <!-- Header -->
   <header
-    class="flex border border-custom bg-gray-200/20 dark:bg-gray-800/20 general-width mt-4 px-2 rounded-md min-w-max"
+    class="sticky top-0 flex gap-2 justify-between border border-custom bg-gray-200/20 dark:bg-gray-800/20 general-width mt-4 px-2 rounded-md min-w-max"
   >
-    <UHorizontalNavigation :links="menu" />
-    <UButton
-      :icon="colorMode.value === 'dark' ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
-      color="gray"
-      variant="ghost"
-      :aria-label="t('layout.themeSelect')"
-      @click="setTheme"
-    />
-    <UButton
-      color="gray"
-      variant="ghost"
-      :aria-label="t('layout.langSelect')"
-      :label="t('layout.lang')"
-      @click="setLocale(locale === 'fr' ? 'en' : 'fr')"
-    />
+    <nuxt-link :to="localePath('/')" aria-label="Home page link">
+      <img src="../public/daisy-logo.svg" class="h-12 w-12" aria-label="logo" />
+    </nuxt-link>
+    <UHorizontalNavigation :links="menu" class="hidden sm:block" />
+    <div class="flex">
+      <UButton
+        :icon="
+          colorMode.value === 'dark' ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'
+        "
+        color="gray"
+        variant="ghost"
+        :aria-label="t('layout.themeSelect')"
+        @click="setTheme"
+      />
+      <UButton
+        color="gray"
+        variant="ghost"
+        :aria-label="t('layout.langSelect')"
+        :label="t('layout.lang')"
+        @click="setLocale(locale === 'fr' ? 'en' : 'fr')"
+      />
+      <UButton
+        icon="i-heroicons:bars-3-20-solid"
+        color="gray"
+        variant="ghost"
+        :aria-label="t('layout.langSelect')"
+        class="sm:hidden"
+        @click="isMobileMenuOpen = true"
+      />
+    </div>
   </header>
+  <!-- Mobile menu -->
+  <USlideover v-model="isMobileMenuOpen" class="[&>*]:p-4 sm:hidden">
+    <UButton
+      color="gray"
+      variant="ghost"
+      icon="i-heroicons-x-mark-20-solid"
+      class="ml-auto"
+      square
+      padded
+      @click="isMobileMenuOpen = false"
+    />
+    <UVerticalNavigation :links="menu" @click="isMobileMenuOpen = false" />
+  </USlideover>
 
   <main class="general-width flex-grow">
     <slot />
