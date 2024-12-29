@@ -17,7 +17,7 @@ export default defineI18nConfig(() => ({
         lang: "FR",
         langSelect: "Sélecteur de langue",
         themeSelect: "Sélecteur de thème",
-        home: "Page d'accueil",
+        home: "Accueil",
         about: "À propos",
         projects: "Projets",
         contact: "Contact",

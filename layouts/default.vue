@@ -33,12 +33,13 @@
 <template>
   <!-- Header -->
   <header
-    class="sticky top-0 flex gap-2 justify-between border border-custom bg-gray-200/20 dark:bg-gray-800/20 general-width mt-4 px-2 rounded-md min-w-max"
+    class="sticky top-0 flex justify-between gap-4 border border-custom bg-gray-200/20 dark:bg-gray-800/20 general-width mt-4 px-2 rounded-md min-w-max"
   >
-    <nuxt-link :to="localePath('/')" aria-label="Home page link">
+    <nuxt-link :to="localePath('/')" aria-label="Home page link" class="flex items-center gap-2">
       <img src="../public/daisy-logo.svg" class="h-12 w-12" aria-label="logo" />
+      <span class="whitespace-nowrap">Camille Hébert</span>
     </nuxt-link>
-    <UHorizontalNavigation :links="menu" class="hidden sm:block" />
+    <UHorizontalNavigation :links="menu" class="hidden sm:block w-fit" />
     <div class="flex">
       <UButton
         :icon="
