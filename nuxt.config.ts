@@ -6,10 +6,10 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: ["@nuxt/ui", "@nuxtjs/i18n"],
   i18n: {
     vueI18n: "./i18n.config.ts",
     locales: ["en", "fr"], // used in URL path prefix
     defaultLocale: "fr", // default locale of your project for Nuxt pages and routings
   },
+  modules: ["@nuxt/ui", "@nuxtjs/i18n"],
 });
