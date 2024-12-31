@@ -13,4 +13,7 @@ export default defineNuxtConfig({
     defaultLocale: "fr",
   },
   modules: ["@nuxt/ui", "@nuxtjs/i18n"],
+  tailwindcss: {
+    configPath: "tailwind.config.ts",
+  },
 });
