@@ -33,11 +33,11 @@
 <template>
   <!-- Header -->
   <header
-    class="sticky top-0 flex justify-between gap-4 border border-custom bg-gray-200/20 dark:bg-gray-800/20 general-width mt-4 px-2 rounded-md min-w-max"
+    class="sticky top-4 flex justify-between gap-4 border border-custom bg-black/5 dark:bg-white/5 general-width mt-4 px-2 rounded-md min-w-max backdrop-blur-lg"
   >
     <nuxt-link :to="localePath('/')" aria-label="Home page link" class="flex items-center gap-2">
-      <img src="../public/daisy-logo.svg" class="h-12 w-12" aria-label="logo" />
-      <span class="whitespace-nowrap">Camille Hébert</span>
+      <img src="../public/daisy-logo.svg" class="h-8 w-8 xxs:h-12 xxs:w-12" aria-label="logo" />
+      <span class="whitespace-nowrap text-sm xxs:text-base">Camille Hébert</span>
     </nuxt-link>
     <UHorizontalNavigation :links="menu" class="hidden sm:block w-fit" />
     <div class="flex">
@@ -79,21 +79,24 @@
       @click="isMobileMenuOpen = false"
     />
     <UVerticalNavigation :links="menu" @click="isMobileMenuOpen = false" />
+    <p class="absolute bottom-2 right-8 text-sm text-gray-600 dark:text-gray-400">
+      Copyright © 2025 - Camille Hébert
+    </p>
   </USlideover>
 
-  <main class="general-width flex-grow">
+  <main class="general-width flex-grow grid grid-cols-12">
     <slot />
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-custom py-4">
-    <p class="text-center">Copyright © 2025 - Camille Hébert</p>
+  <footer class="border-t border-custom py-4 hidden sm:block">
+    <p class="text-center text-gray-600 dark:text-gray-400">Copyright © 2025 - Camille Hébert</p>
   </footer>
 </template>
 
 <style>
   #__nuxt {
-    @apply min-h-screen flex flex-col w-full;
+    @apply min-h-screen flex flex-col w-full bg-gradient-to-br from-blue-100 to-neutral-50 dark:to-black dark:from-slate-950;
   }
   .general-width {
     @apply max-w-[960px] mx-8 lg:mx-auto;
