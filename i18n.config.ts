@@ -10,6 +10,7 @@ export default defineI18nConfig(() => ({
         about: "About",
         projects: "Projects",
         contact: "Contact",
+        footer: `Made with ❤️ by Camille Hébert in 2025.`,
       },
       home: {
         name: "Hi, I'm Camille",
@@ -17,7 +18,7 @@ export default defineI18nConfig(() => ({
         description:
           "I am Camille Hébert, a Full-stack Developer specializing in front-end development. I am dedicated to accessibility and ensuring that web applications meet both user needs and client expectations. With two years of experience, I thrive on creating inclusive and impactful digital solutions. Welcome to my portfolio!",
         resume: "Check my resume",
-        seeMore: "See more about me",
+        seeMore: "Learn more about me",
       },
     },
     fr: {
@@ -29,6 +30,8 @@ export default defineI18nConfig(() => ({
         about: "À propos",
         projects: "Projets",
         contact: "Contact",
+        footer: `Créé avec ❤️ par Camille Hébert en 2025.
+        `,
       },
       home: {
         name: "Hello, je suis Camille",

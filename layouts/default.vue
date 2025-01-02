@@ -33,7 +33,7 @@
 <template>
   <!-- Header -->
   <header
-    class="sticky top-4 flex justify-between gap-4 border border-custom bg-black/5 dark:bg-white/5 general-width mt-4 px-2 rounded-md min-w-max backdrop-blur-lg"
+    class="sticky z-10 top-4 flex justify-between gap-4 border border-custom bg-gray-50/30 dark:bg-gray-200/5 general-width mt-4 px-2 rounded-md min-w-max backdrop-blur-lg"
   >
     <nuxt-link :to="localePath('/')" aria-label="Home page link" class="flex items-center gap-2">
       <img src="../public/daisy-logo.svg" class="h-8 w-8 xxs:h-12 xxs:w-12" aria-label="logo" />
@@ -79,9 +79,10 @@
       @click="isMobileMenuOpen = false"
     />
     <UVerticalNavigation :links="menu" @click="isMobileMenuOpen = false" />
-    <p class="absolute bottom-2 right-8 text-sm text-gray-600 dark:text-gray-400">
-      Copyright © 2025 - Camille Hébert
-    </p>
+    <p
+      class="absolute bottom-0 my-4 mr-4 text-sm text-gray-600 dark:text-gray-400"
+      v-html="t('layout.footer')"
+    />
   </USlideover>
 
   <main class="general-width flex-grow grid grid-cols-12">
@@ -89,12 +90,36 @@
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-custom py-4 hidden sm:block">
-    <p class="text-center text-gray-600 dark:text-gray-400">Copyright © 2025 - Camille Hébert</p>
+  <footer class="border-t border-custom py-4 hidden sm:block text-sm">
+    <p class="text-center text-gray-600 dark:text-gray-400" v-html="t('layout.footer')" />
   </footer>
 </template>
 
 <style>
+  html {
+    scrollbar-gutter: stable;
+  }
+  *::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+  }
+  *::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  *::-webkit-scrollbar-track {
+    background-color: #00000000;
+  }
+
+  *::-webkit-scrollbar-track-piece {
+    background-color: #00000000;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #00000040;
+    border: 1px solid #ffffff40;
+    border-radius: 4px;
+  }
   #__nuxt {
     @apply min-h-screen flex flex-col w-full bg-gradient-to-br from-blue-100 to-neutral-50 dark:to-black dark:from-slate-950;
   }
@@ -103,6 +128,6 @@
     width: -webkit-fill-available;
   }
   .border-custom {
-    @apply border-gray-200 dark:border-gray-800;
+    @apply border-gray-300 dark:border-gray-800;
   }
 </style>
