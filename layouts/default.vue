@@ -1,11 +1,15 @@
 <script setup lang="ts">
-  const { t, setLocale, locale } = useI18n();
   import { useLocalePath } from "#i18n";
+  import { useScroll } from "@vueuse/core";
 
+  const { t, setLocale, locale } = useI18n();
   const localePath = useLocalePath();
   const colorMode = useColorMode();
+  const currentWindow = ref<Window | null>(null);
+  const { directions, y } = useScroll(currentWindow, { behavior: "smooth" });
   const isMobileMenuOpen = ref(false);
-
+  const scrollDirection = ref();
+  const isHeaderHidden = computed(() => scrollDirection.value === "bottom" && y.value > 10);
   const menu = computed(() => [
     {
       label: t("layout.home"),
@@ -28,12 +32,27 @@
   const setTheme = () => {
     colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
   };
+
+  watch(
+    () => directions,
+    () => {
+      if (directions.bottom) scrollDirection.value = "bottom";
+      if (directions.top) scrollDirection.value = "top";
+    },
+    { immediate: true, deep: true }
+  );
+
+  onMounted(() => {
+    currentWindow.value = window;
+  });
 </script>
 
 <template>
   <!-- Header -->
   <header
-    class="sticky z-10 top-4 flex justify-between gap-4 border border-custom bg-gray-50/30 dark:bg-gray-200/5 general-width mt-4 px-2 rounded-md min-w-max backdrop-blur-lg"
+    ref="navbar"
+    class="sticky z-10 top-4 flex justify-between gap-4 border border-custom bg-gray-50/30 dark:bg-gray-200/5 general-width mt-4 px-2 rounded-md min-w-max backdrop-blur-lg transition-transform ease-in-out duration-500"
+    :class="{ '-translate-y-16': isHeaderHidden }"
   >
     <nuxt-link :to="localePath('/')" aria-label="Home page link" class="flex items-center gap-2">
       <img src="../public/daisy-logo.svg" class="h-8 w-8 xxs:h-12 xxs:w-12" aria-label="logo" />
@@ -90,8 +109,11 @@
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-custom py-4 hidden sm:block text-sm">
-    <p class="text-center text-gray-600 dark:text-gray-400" v-html="t('layout.footer')" />
+  <footer class="border-t border-custom sm:py-4 text-sm mt-16">
+    <p
+      class="hidden sm:block text-center text-gray-600 dark:text-gray-400"
+      v-html="t('layout.footer')"
+    />
   </footer>
 </template>
 
@@ -121,7 +143,7 @@
     border-radius: 4px;
   }
   #__nuxt {
-    @apply min-h-screen flex flex-col w-full bg-gradient-to-br from-blue-100 to-neutral-50 dark:to-black dark:from-slate-950;
+    @apply min-h-screen flex flex-col w-full bg-gradient-to-br from-blue-50 to-white dark:to-black dark:from-slate-950;
   }
   .general-width {
     @apply max-w-[960px] mx-8 lg:mx-auto;
