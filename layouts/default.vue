@@ -80,7 +80,7 @@
         icon="i-heroicons:bars-3-20-solid"
         color="gray"
         variant="ghost"
-        :aria-label="t('layout.langSelect')"
+        :aria-label="t('layout.showMenu')"
         class="sm:hidden"
         @click="isMobileMenuOpen = true"
       />

@@ -4,8 +4,9 @@ export default defineI18nConfig(() => ({
     en: {
       layout: {
         lang: "EN",
-        langSelect: "Language selector",
-        themeSelect: "Theme selector",
+        langSelect: "Translate to french",
+        themeSelect: "Change color theme",
+        showMenu: "Show menu",
         home: "Home",
         about: "About",
         projects: "Projects",
@@ -24,8 +25,9 @@ export default defineI18nConfig(() => ({
     fr: {
       layout: {
         lang: "FR",
-        langSelect: "Sélecteur de langue",
-        themeSelect: "Sélecteur de thème",
+        langSelect: "Traduire en anglais",
+        themeSelect: "Changer le thème",
+        showMenu: "Afficher le menu",
         home: "Accueil",
         about: "À propos",
         projects: "Projets",
