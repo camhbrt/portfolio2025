@@ -87,7 +87,14 @@
     </div>
   </header>
   <!-- Mobile menu -->
-  <USlideover v-model="isMobileMenuOpen" class="[&>*]:p-4 sm:hidden">
+  <USlideover
+    v-model="isMobileMenuOpen"
+    class="sm:hidden"
+    :ui="{
+      padding: 'p-4',
+      width: 'max-w-72',
+    }"
+  >
     <UButton
       color="gray"
       variant="ghost"
@@ -97,7 +104,14 @@
       padded
       @click="isMobileMenuOpen = false"
     />
-    <UVerticalNavigation :links="menu" @click="isMobileMenuOpen = false" />
+    <UVerticalNavigation
+      :links="menu"
+      @click="isMobileMenuOpen = false"
+      :ui="{
+        padding: 'py-2',
+        size: 'text-base',
+      }"
+    />
     <p
       class="absolute bottom-0 my-4 mr-4 text-sm text-gray-600 dark:text-gray-400"
       v-html="t('layout.footer')"
