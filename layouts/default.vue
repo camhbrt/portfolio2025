@@ -51,7 +51,7 @@
   <!-- Header -->
   <header
     ref="navbar"
-    class="sticky z-10 top-4 flex justify-between gap-4 border border-custom bg-gray-50/30 dark:bg-gray-200/5 general-width mt-4 px-2 rounded-md min-w-max backdrop-blur-lg transition-transform ease-in-out duration-500"
+    class="sticky z-10 top-4 flex justify-between gap-4 bg-gray-50/70 dark:bg-gray-800/80 border border-custom general-width mt-4 px-2 rounded-md min-w-max backdrop-blur-lg transition-transform ease-in-out duration-500"
     :class="{ '-translate-y-16': isHeaderHidden }"
   >
     <nuxt-link :to="localePath('/')" aria-label="Home page link" class="flex items-center gap-2">
@@ -164,6 +164,6 @@
     width: -webkit-fill-available;
   }
   .border-custom {
-    @apply border-gray-300 dark:border-gray-800;
+    @apply border-gray-300 dark:border-gray-600;
   }
 </style>
