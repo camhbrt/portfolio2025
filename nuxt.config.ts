@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
     head: {
@@ -6,14 +5,21 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", href: "/daisy-logo.svg", type: "image/svg" }],
     },
   },
+
   devtools: { enabled: true },
+
   i18n: {
     vueI18n: "./i18n.config.ts",
     locales: ["en", "fr"],
     defaultLocale: "fr",
   },
-  modules: ["@nuxt/ui", "@nuxtjs/i18n"],
+
+  modules: ["@nuxtjs/i18n", "@nuxt/ui"],
+
   tailwindcss: {
     configPath: "tailwind.config.ts",
   },
+
+  ssr: true,
+  compatibilityDate: "2025-03-17",
 });

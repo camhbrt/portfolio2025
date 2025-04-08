@@ -11,8 +11,7 @@ export default defineI18nConfig(() => ({
         about: "À propos",
         projects: "Projets",
         contact: "Contact",
-        footer: `Créé avec ❤️ par Camille Hébert - 2025
-        `,
+        footer: `Créé avec ❤️ par Camille Hébert`,
       },
       home: {
         name: "Hello, je suis Camille",
@@ -119,7 +118,7 @@ export default defineI18nConfig(() => ({
         about: "About",
         projects: "Projects",
         contact: "Contact",
-        footer: `Made with ❤️ by Camille Hébert - 2025`,
+        footer: `Made with ❤️ by Camille Hébert`,
       },
       home: {
         name: "Hi, I'm Camille",
