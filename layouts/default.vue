@@ -10,6 +10,7 @@
   const isMobileMenuOpen = ref(false);
   const scrollDirection = ref();
   const isHeaderHidden = computed(() => scrollDirection.value === "bottom" && y.value > 10);
+  const currentDate = new Date();
   const menu = computed(() => [
     {
       label: t("layout.home"),
@@ -112,10 +113,9 @@
         size: 'text-base',
       }"
     />
-    <p
-      class="absolute bottom-0 my-4 mr-4 text-sm text-gray-600 dark:text-gray-400"
-      v-html="t('layout.footer')"
-    />
+    <p class="absolute bottom-0 my-4 mr-4 text-sm text-gray-600 dark:text-gray-400">
+      {{ t("layout.footer") }} - {{ currentDate.getFullYear() }}
+    </p>
   </USlideover>
 
   <main class="general-width flex-grow grid grid-cols-12">
@@ -124,10 +124,9 @@
 
   <!-- Footer -->
   <footer class="border-t border-custom sm:py-4 text-sm mt-16">
-    <p
-      class="hidden sm:block text-center text-gray-600 dark:text-gray-400"
-      v-html="t('layout.footer')"
-    />
+    <p class="hidden sm:block text-center text-gray-600 dark:text-gray-400">
+      {{ t("layout.footer") }} - {{ currentDate.getFullYear() }}
+    </p>
   </footer>
 </template>
 
