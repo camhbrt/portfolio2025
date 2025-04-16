@@ -27,7 +27,7 @@
       tags: ["Nuxt 3", "Typescript", "Tailwind", "Directus", "GraphQL", "Storybook"],
       description:
         "Durant mes deux années chez Netatmo, l'un de mes projets majeurs a été la refonte et la maintenance du site vitrine de la marque, en collaboration avec l'équipe marketing et UX. Missions principales Développement Frontend : Création et intégration de composants UI réutilisables en Nuxt 3 et TypeScript, enrichissant la librairie Storybook. Mise en place d'animations interactives et fluides avec GSAP pour améliorer l'expérience utilisateur. Gestion des contenus : Connexion aux données via Directus et GraphQL, permettant à l'équipe marketing de gérer le contenu en toute autonomie. Collaboration & Agilité : Travail en équipe avec 3 développeurs, l'équipe marketing et l'UX designer, en méthodologie agile. Maintenance & Évolution : De septembre 2024 à mai 2025, j’ai été la principale mainteneuse du site, développant de nouvelles fonctionnalités et optimisant les performances. J’ai également accompagné l’équipe marketing dans l’utilisation de Directus pour la gestion des contenus.s",
-      url: "https://www.netatmo.fr",
+      url: "https://www.netatmo.com",
       image: "/netatmo-mini.png",
     },
     {
@@ -42,7 +42,7 @@
   ];
 </script>
 <template>
-  <p class="row-start-1">Projects page</p>
+  <p class="row-start-1 col-span-full">Projects page</p>
   <ul class="row-start-2 col-start-2 -col-end-2 grid gap-6 md:grid-cols-2">
     <li v-for="project in data" :key="project.title" class="">
       <ProjectCard v-bind="project" />
