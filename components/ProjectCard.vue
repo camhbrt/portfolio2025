@@ -21,7 +21,7 @@
     <!-- Overlay dégradé -->
     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/50" />
 
-    <!-- Contenu -->
+    <!-- Card content -->
     <div class="absolute bottom-0 p-4 text-white">
       <h3 class="text-lg font-bold">{{ title.toUpperCase() }}</h3>
       <p class="text-sm">{{ subtitle }}</p>
@@ -33,6 +33,7 @@
     </div>
   </button>
 
+  <!-- Drawer detail -->
   <USlideover
     v-model="isModalOpen"
     :ui="{
@@ -40,18 +41,38 @@
       width: 'overflow-y-auto',
     }"
   >
-    <h3 class="text-lg font-bold">{{ title.toUpperCase() }}</h3>
-    <p class="text-sm">{{ subtitle }}</p>
-    <ul class="flex gap-2 flex-wrap">
+    <h2 class="text-3xl font-bold">{{ title.toUpperCase() }}</h2>
+    <p class="text-sm my-2">{{ subtitle }}</p>
+    <ul class="flex gap-x-2 flex-wrap">
+      <span class="text-xs self-center">Tags :</span>
       <li v-for="(tag, index) in tags" :key="index">
-        <UBadge :label="tag" variant="solid" color="white" size="sm" />
+        <UBadge :label="tag" variant="subtle" color="primary" size="xs" />
       </li>
     </ul>
 
-    <img :src="image" :alt="alt" class="rounded-xl my-4" />
+    <img :src="image" :alt="alt" class="rounded-xl my-8" />
 
     <p v-html="description" />
-    <UButton :href="repository" :label="'Voir le repository'" />
-    <UButton :href="url" :label="'Voir en live'" />
+
+    <div v-if="repository || url" class="flex my-8 flex-wrap justify-center gap-8">
+      <UButton
+        v-if="repository"
+        :label="'Voir le repository'"
+        class="w-fit"
+        variant="soft"
+        :to="repository"
+        target="_blank"
+        rel="noopener noreferrer"
+      />
+      <UButton
+        v-if="url"
+        :label="'Voir en live'"
+        class="w-fit"
+        variant="soft"
+        :to="url"
+        target="_blank"
+        rel="noopener noreferrer"
+      />
+    </div>
   </USlideover>
 </template>
