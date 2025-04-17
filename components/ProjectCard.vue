@@ -41,7 +41,15 @@
       width: 'overflow-y-auto',
     }"
   >
-    <h2 class="text-3xl font-bold">{{ title.toUpperCase() }}</h2>
+    <div class="flex justify-between">
+      <h2 class="text-3xl font-bold">{{ title.toUpperCase() }}</h2>
+      <UButton
+        icon="i-material-symbols:close"
+        @click="isModalOpen = false"
+        variant="ghost"
+        color="neutral"
+      />
+    </div>
     <p class="text-sm my-2">{{ subtitle }}</p>
     <ul class="flex gap-x-2 flex-wrap">
       <span class="text-xs self-center">Tags :</span>
