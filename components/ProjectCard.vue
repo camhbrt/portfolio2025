@@ -15,11 +15,13 @@
 <template>
   <button
     @click="isModalOpen = true"
-    class="relative w-full h-64 rounded-xl overflow-hidden bg-cover bg-center"
+    class="relative w-full h-64 rounded-xl overflow-hidden bg-cover bg-center border border-custom group"
     :style="{ backgroundImage: `url(${image})` }"
   >
     <!-- Overlay dégradé -->
-    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/50" />
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10 group-hover:backdrop-blur-sm group-focus:backdrop-blur-sm transition-transform duration-500 ease-in-out"
+    />
 
     <!-- Card content -->
     <div class="absolute bottom-0 p-4 text-white">
@@ -58,7 +60,7 @@
       </li>
     </ul>
 
-    <img :src="image" :alt="alt" class="rounded-xl my-8" />
+    <img :src="image" :alt="alt" class="rounded-xl my-8 border border-custom" />
 
     <p v-html="description" />
 
@@ -67,7 +69,8 @@
         v-if="repository"
         :label="'Voir le repository'"
         class="w-fit"
-        variant="soft"
+        variant="outline"
+        color="neutral"
         :to="repository"
         target="_blank"
         rel="noopener noreferrer"
@@ -76,7 +79,8 @@
         v-if="url"
         :label="'Voir en live'"
         class="w-fit"
-        variant="soft"
+        variant="outline"
+        color="neutral"
         :to="url"
         target="_blank"
         rel="noopener noreferrer"
