@@ -107,6 +107,12 @@ export default defineI18nConfig(() => ({
         advanced: "avancé (C1)",
         beginner: "débutant (depuis 2025)",
       },
+      contact: {
+        title: "Envie de collaborer sur un projet\u00A0?",
+        highlight: "Discutons-en",
+        messageMe: "Ecrivez-moi",
+        socials: "Vous pouvez également retrouver mes réseaux professionnels ci-dessous.",
+      },
     },
     en: {
       layout: {
@@ -213,6 +219,12 @@ export default defineI18nConfig(() => ({
         mothersTongue: "native language",
         advanced: "advanced (C1)",
         beginner: "beginner (since 2025)",
+      },
+      contact: {
+        title: "Interested in collaborating on a project\u00A0?",
+        highlight: "Let's talk",
+        messageMe: "Message me",
+        socials: "You can also find my professional socials below.",
       },
     },
   },

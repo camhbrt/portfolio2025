@@ -6,24 +6,25 @@
     <p class="text-2xl font-bold">
       {{ t("home.name") }}
     </p>
-    <h1 class="text-4xl xxs:text-5xl font-bold text-pretty">{{ t("home.job") }}</h1>
+    <h1 class="text-4xl xxs:text-5xl font-bold text-pretty text-primary">{{ t("home.job") }}</h1>
     <p class="text-pretty">{{ t("home.description") }}</p>
     <div class="flex flex-wrap gap-4">
       <UButton
         :label="t('home.resume')"
-        color="sky"
-        variant="solid"
+        color="neutral"
+        variant="outline"
         target="_blank"
         :to="'/camille_hebert.pdf'"
+        class="px-12"
       />
       <UButton
         :to="$localePath('/about')"
         :label="t('home.seeMore')"
         icon="i-heroicons:arrow-right"
-        color="sky"
+        color="neutral"
         variant="link"
         trailing
-        class="hover:no-underline ml-auto transition-all ease-in-out group-last:hover:animate-ping"
+        class="ml-auto transition-all ease-in-out group-last:hover:animate-ping"
       />
     </div>
   </div>

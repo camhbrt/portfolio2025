@@ -42,8 +42,7 @@
   ];
 </script>
 <template>
-  <p class="row-start-1 col-span-full">Projects page</p>
-  <ul class="row-start-2 col-start-2 -col-end-2 grid gap-6 md:grid-cols-2">
+  <ul class="row-start-2 col-start-2 -col-end-2 grid gap-6 md:grid-cols-2 mt-12">
     <li v-for="project in data" :key="project.title" class="">
       <ProjectCard v-bind="project" />
     </li>
