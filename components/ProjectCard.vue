@@ -49,7 +49,7 @@
         icon="i-material-symbols:close"
         @click="isModalOpen = false"
         variant="ghost"
-        color="neutral"
+        color="gray"
       />
     </div>
     <p class="text-sm my-2">{{ subtitle }}</p>
