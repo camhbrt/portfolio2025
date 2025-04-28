@@ -39,6 +39,16 @@
       repository: "https://github.com/camhbrt/MysteryQuest",
       image: "/mystery-mini.png",
     },
+    {
+      title: "Amelia's Castle",
+      subtitle: "Jeu vidéo pour console virtuelle PICO-8",
+      tags: ["Lua"],
+      description:
+        "Il s’agit de mon tout premier projet d'école, réalisé en équipe de 4 développeuses. Ce projet ludique m’a permis de mettre en pratique les bases de la programmation \(variables, conditions, boucles\) tout en découvrant le travail en équipe en mode agile. J’y ai contribué en concevant certains éléments graphiques, en animant les nuages et la fumée toxique, ainsi qu’en implémentant les mécaniques de victoire et de défaite… sans oublier la musique !",
+      repository: "https://github.com/camhbrt/amelias_castle",
+      url: "https://www.lexaloffle.com/bbs/?tid=52831",
+      image: "/amelias-mini.png",
+    },
   ];
 </script>
 <template>
