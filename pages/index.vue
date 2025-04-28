@@ -11,7 +11,7 @@
     <div class="flex flex-wrap gap-4">
       <UButton
         :label="t('home.resume')"
-        color="neutral"
+        color="white"
         variant="outline"
         target="_blank"
         :to="'/camille_hebert.pdf'"
@@ -21,7 +21,7 @@
         :to="$localePath('/about')"
         :label="t('home.seeMore')"
         icon="i-heroicons:arrow-right"
-        color="neutral"
+        color="white"
         variant="link"
         trailing
         class="ml-auto transition-all ease-in-out group-last:hover:animate-ping"
