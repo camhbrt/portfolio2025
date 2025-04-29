@@ -10,7 +10,7 @@
     </h1>
     <UButton
       :label="t('contact.messageMe')"
-      color="neutral"
+      color="white"
       variant="outline"
       size="xl"
       to="mailto:camille.hebert22@gmail.com"
@@ -23,7 +23,7 @@
     <div class="flex flex-row justify-center gap-x-4">
       <UButton
         alt="linkedin"
-        color="neutral"
+        color="white"
         variant="outline"
         size="2xs"
         target="_blank"
@@ -34,7 +34,7 @@
       />
       <UButton
         alt="github"
-        color="neutral"
+        color="white"
         variant="outline"
         size="2xs"
         target="_blank"
