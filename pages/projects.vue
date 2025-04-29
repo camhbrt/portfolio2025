@@ -34,6 +34,18 @@
       image: "/netatmo-mini.png",
     },
     {
+      title: "Portfolio",
+      subtitle: "Création de mon propre site vitrine",
+      tags: ["Nuxt 3", "Typescript", "Tailwind", "NuxtUI", "i18n"],
+      description:
+        "Ce portfolio me sert à la fois de vitrine pour exposer mes travaux et mon parcours, mais également de bac à sable pour travailler mes compétences en développement de site web. En évolution constante, j’essaye d’en améliorer les SEO, l’accessibilité et l’expérience utilisateur, tout en laissant parler ma créativité et ma curiosité pour de nouveaux outils.",
+      repository: {
+        link: "https://github.com/camhbrt/portfolio2025",
+        icon: "i-mdi:github",
+      },
+      image: "/",
+    },
+    {
       title: "Mystery Quest",
       subtitle: "Application mobile de chasse au trésor géolocalisée",
       tags: ["React Native", "Expo", "Node.js", "Express", "MySQL"],
