@@ -4,7 +4,10 @@
     tags: string[];
     subtitle: string;
     description: string;
-    repository?: string;
+    repository?: {
+      link: string;
+      icon: string;
+    };
     url?: string;
     image?: string;
     alt?: string;
@@ -24,7 +27,7 @@
     />
 
     <!-- Card content -->
-    <div class="absolute bottom-0 p-4 text-white">
+    <div class="absolute bottom-0 p-4 w-full text-white">
       <h3 class="text-lg font-bold">{{ title.toUpperCase() }}</h3>
       <p class="text-sm">{{ subtitle }}</p>
       <ul class="flex gap-2 flex-wrap mt-2">
@@ -71,7 +74,8 @@
         class="w-fit"
         variant="outline"
         color="white"
-        :to="repository"
+        :trailing-icon="repository.icon"
+        :to="repository.link"
         target="_blank"
         rel="noopener noreferrer"
       />
@@ -84,6 +88,7 @@
         :to="url"
         target="_blank"
         rel="noopener noreferrer"
+        trailing-icon="i-mdi:open-in-new"
       />
     </div>
   </USlideover>
