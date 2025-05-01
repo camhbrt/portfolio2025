@@ -55,10 +55,10 @@
     class="sticky z-10 top-4 flex justify-between gap-4 bg-gray-50/70 dark:bg-gray-800/80 border border-custom general-width mt-4 px-2 rounded-md min-w-max backdrop-blur-lg transition-transform ease-in-out duration-500"
     :class="{ '-translate-y-16': isHeaderHidden }"
   >
-    <nuxt-link :to="localePath('/')" aria-label="Home page link" class="flex items-center gap-2">
-      <img src="../public/daisy-logo.svg" class="h-8 w-8 xxs:h-12 xxs:w-12" aria-label="logo" />
+    <NuxtLink :to="localePath('/')" aria-label="Home page link" class="flex items-center gap-2">
+      <NuxtImg src="/daisy-logo.svg" class="h-8 w-8 xxs:h-12 xxs:w-12" aria-label="logo" />
       <span class="whitespace-nowrap text-sm xxs:text-base">Camille Hébert</span>
-    </nuxt-link>
+    </NuxtLink>
     <UHorizontalNavigation :links="menu" class="hidden sm:block w-fit" />
     <div class="flex">
       <UButton
@@ -159,7 +159,7 @@
     @apply min-h-screen flex flex-col w-full bg-gradient-to-br from-blue-50 to-white dark:to-black dark:from-slate-950;
   }
   .general-width {
-    @apply max-w-[960px] mx-8 lg:mx-auto;
+    @apply max-w-[1100px] mx-8 lg:mx-auto;
     width: -webkit-fill-available;
   }
   .border-custom {
