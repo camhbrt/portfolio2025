@@ -112,8 +112,8 @@
 </script>
 
 <template>
-  <img
-    src="../public/undraw_programmer_1tdi.svg"
+  <NuxtImg
+    src="/undraw_programmer_1tdi.svg"
     alt="Illustration de développeuse informatique"
     class="col-start-1 -col-end-1 xs:col-start-4 xs:-col-end-4 md:col-start-1 md:col-end-5 lg:col-end-6 my-4 md:mt-12 border-8 rounded-full border-gray-700 contrast-150"
   />

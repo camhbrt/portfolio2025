@@ -63,7 +63,7 @@
       </li>
     </ul>
 
-    <img :src="image" :alt="alt" class="rounded-xl my-8 border border-custom" />
+    <NuxtImg :src="image" :alt="alt" class="rounded-xl my-8 border border-custom" />
 
     <p v-html="description" />
 

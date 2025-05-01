@@ -28,8 +28,8 @@
       />
     </div>
   </div>
-  <img
-    src="../public/portrait.svg"
+  <NuxtImg
+    src="/portrait.svg"
     alt="Portrait de Camille Hébert"
     class="col-start-1 -col-end-1 xs:col-start-3 xs:-col-end-3 md:row-start-1 md:-col-end-1 md:col-start-8 my-4 md:my-auto"
   />
