@@ -17,13 +17,13 @@
 </script>
 <template>
   <button
-    @click="isModalOpen = true"
     class="relative w-full h-64 rounded-xl overflow-hidden bg-cover bg-center border border-custom group"
     :style="{ backgroundImage: `url(${image})` }"
+    @click="isModalOpen = true"
   >
     <!-- Overlay dégradé -->
     <div
-      class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10 group-hover:backdrop-blur-sm group-focus:backdrop-blur-sm transition-transform duration-500 ease-in-out"
+      class="absolute inset-0 bg-linear-to-t from-black via-black/70 to-black/10 group-hover:backdrop-blur-xs group-focus:backdrop-blur-xs transition-transform duration-500 ease-in-out"
     />
 
     <!-- Card content -->
@@ -50,9 +50,9 @@
       <h2 class="text-3xl font-bold">{{ title.toUpperCase() }}</h2>
       <UButton
         icon="i-material-symbols:close"
-        @click="isModalOpen = false"
         variant="ghost"
         color="gray"
+        @click="isModalOpen = false"
       />
     </div>
     <p class="text-sm my-2">{{ subtitle }}</p>
