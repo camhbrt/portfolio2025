@@ -62,7 +62,7 @@
       subtitle: "Jeu vidéo pour console virtuelle PICO-8",
       tags: ["Lua"],
       description:
-        "Il s’agit de mon tout premier projet d'école, réalisé en équipe de 4 développeuses. Ce projet ludique m’a permis de mettre en pratique les bases de la programmation \(variables, conditions, boucles\) tout en découvrant le travail en équipe en mode agile. J’y ai contribué en concevant certains éléments graphiques, en animant les nuages et la fumée toxique, ainsi qu’en implémentant les mécaniques de victoire et de défaite… sans oublier la musique !",
+        "Il s’agit de mon tout premier projet d'école, réalisé en équipe de 4 développeuses. Ce projet ludique m’a permis de mettre en pratique les bases de la programmation (variables, conditions, boucles) tout en découvrant le travail en équipe en mode agile. J’y ai contribué en concevant certains éléments graphiques, en animant les nuages et la fumée toxique, ainsi qu’en implémentant les mécaniques de victoire et de défaite… sans oublier la musique !",
       repository: {
         link: "https://github.com/camhbrt/amelias_castle",
         icon: "i-mdi:github",
@@ -73,9 +73,13 @@
   ];
 </script>
 <template>
-  <ul class="row-start-2 col-start-2 -col-end-2 grid gap-6 md:grid-cols-2 mt-12">
-    <li v-for="project in data" :key="project.title" class="">
-      <ProjectCard v-bind="project" />
-    </li>
-  </ul>
+  <section class="grid grid-cols-12">
+    <ul
+      class="row-start-2 col-start-2 -col-end-2 lg:col-start-3 lg:-col-end-3 grid gap-6 md:grid-cols-2 mt-12"
+    >
+      <li v-for="project in data" :key="project.title" class="">
+        <ProjectCard v-bind="project" />
+      </li>
+    </ul>
+  </section>
 </template>

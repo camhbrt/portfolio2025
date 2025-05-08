@@ -127,7 +127,7 @@
       </header>
 
       <!-- Page content -->
-      <NuxtPage class="max-w-[1200px] flex-grow mx-8 xl:mx-auto" />
+      <NuxtPage class="max-w-[1200px] xl:w-[1200px] flex-grow mx-8 xl:mx-auto" />
 
       <!-- Footer Desktop-->
       <footer class="bottom-0 w-full border-t mt-16 sm:py-4 text-sm">
