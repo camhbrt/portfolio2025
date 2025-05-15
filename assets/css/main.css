@@ -10,11 +10,10 @@
 }
 
 :root {
-  --ui-bg: var(--ui-color-neutral-50);
   --ui-border: var(--ui-color-neutral-300);
+  --ui-color-primary-500: #0b95da;
 }
 .dark {
-  --ui-bg: var(--ui-color-neutral-950);
   --ui-border: var(--color-neutral-600);
 }
 
