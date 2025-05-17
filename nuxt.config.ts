@@ -1,3 +1,4 @@
+import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   app: {
     head: {
@@ -5,6 +6,10 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", href: "/daisy-logo.svg", type: "image/svg" }],
     },
   },
+
+  compatibilityDate: "2024-11-01",
+
+  css: ["~/assets/css/main.css"],
 
   devtools: { enabled: true },
 
@@ -14,12 +19,17 @@ export default defineNuxtConfig({
     defaultLocale: "fr",
   },
 
-  modules: ["@nuxtjs/i18n", "@nuxt/ui", "@nuxt/image"],
-
-  tailwindcss: {
-    configPath: "tailwind.config.ts",
-  },
+  modules: ["@nuxt/image", "@nuxt/ui", "@nuxt/icon", "@nuxt/eslint", "@nuxtjs/i18n"],
 
   ssr: true,
-  compatibilityDate: "2025-03-17",
+
+  // ui: {
+  //   theme: {
+  //     colors: ["primary", "secondary", "tertiary", "info", "success", "warning", "error"],
+  //   },
+  // },
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

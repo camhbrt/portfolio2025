@@ -20,92 +20,93 @@ export default defineI18nConfig(() => ({
           "Je suis Camille Hébert, développeuse Full-stack spécialisée en développement front-end. L'accessibilité est au cœur de mon travail, et je veille à ce que les applications web répondent aux besoins des utilisateurs et aux attentes des clients. Forte de deux ans d'expérience, je m'épanouis dans la création de solutions numériques inclusives et percutantes. Bienvenue sur mon portfolio !",
         resume: "Voir mon CV",
         seeMore: "En savoir plus",
+        highlights: "En résumé",
+        twoYears: "2 ans",
+        experience: "d'expérience en développement web",
+        master: "Maîtrise de l'écosystème",
+        vue: "vue.js",
+        vueTools: "nuxt, pinia, vitest, vueUse,..",
+        a11y: "a11y",
+        accessibility: "pratique axée sur l'accessibilité",
       },
-      career: {
-        background: "Mon parcours",
-        careerChange:
-          "Après six années passées à enseigner la musique au collège, j'ai décidé en 2023 de retourner sur les bancs de l'école et troquer le clavier de mon piano pour celui d'un ordinateur.",
-        teachingExperience:
-          "Mon expérience d'enseignante m'a appris à allier empathie et rigueur pour comprendre les besoins de mes élèves et les aider à surmonter leurs difficultés. Aujourd'hui, cette capacité d'adaptation me permet de concevoir des applications fiables, accessibles et intuitives, en phase avec les attentes des utilisateurs.",
-        currentJob:
-          "Depuis octobre 2023, j'exerce comme développeuse web chez Netatmo. J'y contribue à la création, l'optimisation et la maintenance de leurs sites web, en recherchant des solutions qui répondent aux besoins des utilisateurs et aux objectifs de l'entreprise, tout en m'assurant de l'accessibilité numérique.",
-      },
-      resume: {
-        label: "CV",
-        work: {
-          label: "Expériences professionnelles",
-          netatmo: {
-            date: "depuis oct. 2023",
-            title: "Développeuse web - NETATMO",
-            description:
-              "Depuis octobre 2023, j'exerce en tant que développeuse web en sein de l'équipe marketing de Netatmo, l'entreprise française leader de la maison connectée. Je participe au développement et au maintien des sites vitrine et e-commerce de la marque.",
+      about: {
+        softSkills: {
+          title: "Mes points forts",
+          empathetic: "Empathique",
+          empatheticFooter: "je veille au bien-être de chacun dans l'équipe",
+          flexible: "Flexible",
+          flexibleFooter: "j'analyse le contexte pour m'adapter intelligemment",
+          collaborative: "Collaborative",
+          collaborativeFooter: "ce que je préfère c'est construire ensemble",
+          curious: "Curieuse",
+          curiousFooter: "j'aime découvrir de nouveaux domaines",
+          responsible: "Responsable",
+          responsibleFooter:
+            "lorsqu'on me donne une mission, je fais de mon possible pour la mener à bien",
+          transparent: "Transparente",
+          transparentFooter: "je communique avec honnêteté",
+        },
+        stepper: {
+          teaching: {
+            title: "Enseignement",
+            descriptionHtml: `
+              <div class="space-y-2">
+                <p>
+                  J’ai enseigné pendant 6 ans au collège, où j’ai appris à transmettre des notions complexes de manière claire et engageante.
+                  Cette expérience m’a également permis de développer un sens aigu de la pédagogie et de l’écoute.
+                </p>
+                <p class="font-semibold">Compétences développées :</p>
+                <ul>
+                  <li>✔️ Pédagogie : vulgarisation de concepts complexes</li>
+                  <li>✔️ Gestion de projets : création et suivi de projets pédagogiques</li>
+                  <li>✔️ Empathie & adaptabilité : prise en compte des besoins variés des élèves</li>
+                  <li>✔️ Prise de parole : animation de groupes et communication claire</li>
+                </ul>
+              </div>
+            `,
           },
-          chantemerle: {
-            date: "2017 - 2023",
-            title: "Professeure d'éducation musicale et chant choral",
-            description:
-              "Fonctionnaire rattachée au ministère de l'Education Nationale, j'ai enseigné pendant 6 ans, dont 5 au collège le Chantemerle de Corbeil-Essonnes (91). En charge de 20 classes par an (approx. 500 élèves), j'ai développé des compétences en gestion de groupes, gestion de projet, communication",
+          reconversion: {
+            title: "Reconversion",
+            descriptionHtml: `
+              <div class="space-y-2">
+                <p>
+                  En 2023, j’ai quitté l’Éducation nationale pour me reconvertir dans le développement web. J’ai choisi
+                  Ada Tech School, une école inclusive et alternative, centrée sur la pratique, la collaboration et l’apprentissage autonome.
+                </p>
+                <p class="font-semibold">Compétences développées :</p>
+                <ul>
+                  <li>✔️ Collaboration : nombreux projets de groupe en pair programming</li>
+                  <li>✔️ Autonomie & rigueur : apprentissage en auto-gestion</li>
+                  <li>✔️ Curiosité : ouverture à de nombreuses technos front et back</li>
+                  <li>✔️ Résilience : changement de carrière exigeant, mais motivant</li>
+                </ul>
+                <p>
+                  Fin 2024, j’obtiens le titre RNCP de <strong>Conceptrice Développeuse d’Applications</strong>.
+                </p>
+              </div>
+            `,
           },
-          mcdonalds: {
-            date: "2013 - 2016",
-            title: "Equipière polyvalente chargée de dépôt",
-            description:
-              "Durant ma licence, j'ai travaillé chez McDonald's à Paris et Vigneux-sur-Seine (91) en tant qu'équipière polyvalente, en charge de la préparation des commandes, du service des clients et de la gestion des caisses, des stocks et dépôts d'argent en collaboration avec le manager.",
+          development: {
+            title: "Développement",
+            descriptionHtml: `
+              <div class="space-y-2">
+                <p>
+                  Depuis octobre 2023, je travaille chez Netatmo comme développeuse web sur leur site vitrine et leur e-shop. J’ai d’abord intégré l’équipe en alternance, puis en poursuivant sur une mission avec la même équipe.
+                </p>
+                <p class="font-semibold">Compétences développées :</p>
+                <ul>
+                  <li>✔️ Vue.js 3, Nuxt.js & TypeScript : développement d’interfaces dynamiques</li>
+                  <li>✔️ TailwindCSS & Storybook : UI modulaires & maintenables</li>
+                  <li>✔️ CMS headless Directus : gestion de contenu sur mesure</li>
+                  <li>✔️ Travail en équipe agile : rituels, tickets, revues de code</li>
+                </ul>
+                <p>
+                  Cette première expérience concrète m’a permis de consolider mes acquis tout en découvrant les enjeux métier et les contraintes réelles du développement web.
+                </p>
+              </div>
+            `,
           },
         },
-        education: {
-          label: "Education",
-          ada: {
-            date: "2024",
-            title: "TP concepteur développeur d'applications",
-            description: "Ada Tech School, Paris (équivalent Bac+3)",
-          },
-          master: {
-            date: "2018",
-            title: "Master MEEF (enseignement) spécialité musique",
-            description:
-              "Université Rennes 2 / Institut National Supérieur du Professorat et de l'Education de Rennes",
-          },
-          licence: {
-            date: "2016",
-            title: "Licence de Musique et Musicologie",
-            description: "Université d'Evry-Val-d'Essonne",
-          },
-        },
-      },
-      skills: {
-        discoverProjects: "Découvrir mon travail",
-        skills: "Compétences",
-        softSkills: "Qualités",
-        hardSkills: "Compétences techniques",
-        languages: "Langues",
-        creativity: "Créativité",
-        empathy: "Empathie",
-        aestheticSense: "Sens esthétique",
-        organization: "Organisation",
-        adaptability: "Adaptabilité",
-        collaboration: "Collaboration",
-        responsiveDesign: "Responsive Design",
-        frontendFrameworks: "Frameworks front-end (React, Vue.js, Angular)",
-        design: "UI/UX Design",
-        prototyping: "Prototypage (Figma, Adobe XD)",
-        webAnimations: "Animations web (CSS, GSAP)",
-        webAccessibility: "Accessibilité web (WCAG)",
-        multimedia: "Multimédia (audio/vidéo en ligne)",
-        projectManagement: "Gestion de projet (Trello, Jira, Asana)",
-        socialAwareness: "Conscience sociale",
-        inclusionDiversity: "Inclusion et diversité",
-        ecoResponsibility: "Éco-responsabilité numérique",
-        digitalEthics: "Éthique numérique",
-        inclusiveCommunication: "Communication inclusive",
-        workEthic: "Éthique de travail",
-        detailOrientation: "Soucis du détail",
-        french: "Français",
-        english: "Anglais",
-        japanese: "Japonais",
-        mothersTongue: "langue maternelle",
-        advanced: "avancé (C1)",
-        beginner: "débutant (depuis 2025)",
       },
       contact: {
         title: "Envie de collaborer sur un projet\u00A0?",
@@ -133,92 +134,92 @@ export default defineI18nConfig(() => ({
           "I am Camille Hébert, a Full-stack Developer specializing in front-end development. I am dedicated to accessibility and ensuring that web applications meet both user needs and client expectations. With two years of experience, I thrive on creating inclusive and impactful digital solutions. Welcome to my portfolio!",
         resume: "Check my resume",
         seeMore: "Learn more about me",
+        highlights: "Highlights",
+        twoYears: "2 years",
+        experience: "of experience in web development",
+        master: "Mastery of the ecosystem",
+        vue: "vue.js",
+        vueTools: "nuxt, pinia, vitest, vueUse, etc.",
+        a11y: "a11y",
+        accessibility: "accessibility-focused practice",
       },
-      career: {
-        background: "Background",
-        careerChange:
-          "After six years of teaching music in middle school, I decided in 2023 to go back to school and swap my piano keyboard for a computer keyboard.",
-        teachingExperience:
-          "My teaching experience has taught me to combine empathy and rigor to understand my students' needs and help them overcome their difficulties. Today, this ability to adapt allows me to design reliable, accessible, and intuitive applications that align with user expectations.",
-        currentJob:
-          "Since October 2023, I have been working as a web developer at Netatmo. I contribute to the creation, optimization, and maintenance of their websites, seeking solutions that meet user needs and business objectives while ensuring digital accessibility.",
-      },
-      resume: {
-        label: "Resume",
-        work: {
-          label: "Work Experience",
-          netatmo: {
-            date: "since Oct. 2023",
-            title: "Web Developer - NETATMO",
-            description:
-              "Since October 2023, I have been working as a web developer within the marketing team at Netatmo, the French leader in smart home technology. I participate in the development and maintenance of the brand's showcase and e-commerce websites.",
+      about: {
+        softSkills: {
+          title: "My strengths",
+          empathetic: "Empathetic",
+          empatheticFooter: "I care about everyone's well-being in the team",
+          flexible: "Flexible",
+          flexibleFooter: "I analyze the context to adapt smartly",
+          collaborative: "Collaborative",
+          collaborativeFooter: "What I love most is building together",
+          curious: "Curious",
+          curiousFooter: "I love exploring new fields",
+          responsible: "Responsible",
+          responsibleFooter: "When I'm given a mission, I do my best to carry it through",
+          transparent: "Transparent",
+          transparentFooter: "I communicate with honesty",
+        },
+        stepper: {
+          teaching: {
+            title: "Teaching",
+            descriptionHtml: `
+              <div class="space-y-2">
+                <p>
+                  I taught for 6 years in middle school, where I learned to convey complex concepts clearly and engagingly.
+                  This experience also helped me develop strong teaching skills and active listening.
+                </p>
+                <p class="font-semibold">Skills developed:</p>
+                <ul>
+                  <li>✔️ Pedagogy: simplifying complex ideas</li>
+                  <li>✔️ Project management: designing and monitoring educational projects</li>
+                  <li>✔️ Empathy & adaptability: addressing students’ diverse needs</li>
+                  <li>✔️ Public speaking: leading groups and communicating clearly</li>
+                </ul>
+              </div>
+            `,
           },
-          chantemerle: {
-            date: "2017 - 2023",
-            title: "Music and Choir Teacher",
-            description:
-              "As a civil servant under the French Ministry of National Education, I taught for six years, including five at Collège le Chantemerle in Corbeil-Essonnes (91). Managing 20 classes per year (approx. 500 students), I developed skills in group management, project management, and communication.",
+          reconversion: {
+            title: "Career Change",
+            descriptionHtml: `
+              <div class="space-y-2">
+                <p>
+                  In 2023, I left the public education system to retrain as a web developer. I chose
+                  Ada Tech School, an inclusive and alternative school focused on hands-on learning, collaboration, and self-directed education.
+                </p>
+                <p class="font-semibold">Skills developed:</p>
+                <ul>
+                  <li>✔️ Collaboration: many group projects in pair programming</li>
+                  <li>✔️ Autonomy & rigor: self-managed learning</li>
+                  <li>✔️ Curiosity: exposure to a wide range of front-end and back-end technologies</li>
+                  <li>✔️ Resilience: demanding but rewarding career transition</li>
+                </ul>
+                <p>
+                  By the end of 2024, I will earn the RNCP title of <strong>Application Developer Designer</strong>.
+                </p>
+              </div>
+            `,
           },
-          mcdonalds: {
-            date: "2013 - 2016",
-            title: "Assistant Manager",
-            description:
-              "During my undergraduate studies, I worked at McDonald's in Paris and Vigneux-sur-Seine (91), handling order preparation, customer service, and managing cash registers, stock, and cash deposits in collaboration with the manager.",
+          development: {
+            title: "Development",
+            descriptionHtml: `
+              <div class="space-y-2">
+                <p>
+                  Since October 2023, I’ve been working at Netatmo as a web developer on their showcase website and e-shop. I started as an apprentice and continued with the same team on a contract.
+                </p>
+                <p class="font-semibold">Skills developed:</p>
+                <ul>
+                  <li>✔️ Vue.js 3, Nuxt.js & TypeScript: building dynamic interfaces</li>
+                  <li>✔️ TailwindCSS & Storybook: modular and maintainable UI</li>
+                  <li>✔️ Headless CMS (Directus): custom content management</li>
+                  <li>✔️ Agile teamwork: ceremonies, tickets, code reviews</li>
+                </ul>
+                <p>
+                  This first real-world experience helped me solidify my skills while learning about business challenges and real constraints in web development.
+                </p>
+              </div>
+            `,
           },
         },
-        education: {
-          label: "Education",
-          ada: {
-            date: "2024",
-            title: "Bachelor's degree - Software Developer",
-            description: "Ada Tech School, Paris",
-          },
-          master: {
-            date: "2018",
-            title: "Master's Degree in Teaching (MEEF) - Music Specialization",
-            description:
-              "Université Rennes 2 / Institut National Supérieur du Professorat et de l'Éducation de Rennes",
-          },
-          licence: {
-            date: "2016",
-            title: "Bachelor's Degree in Music and Musicology",
-            description: "Université d'Évry-Val-d'Essonne",
-          },
-        },
-      },
-      skills: {
-        discoverProjects: "Discover My Work",
-        skills: "Skills",
-        softSkills: "Soft Skills",
-        hardSkills: "Technical Skills",
-        languages: "Languages",
-        creativity: "Creativity",
-        empathy: "Empathy",
-        aestheticSense: "Aesthetic Sense",
-        organization: "Organization",
-        adaptability: "Adaptability",
-        collaboration: "Collaboration",
-        responsiveDesign: "Responsive Design",
-        frontendFrameworks: "Front-end Frameworks (React, Vue.js, Angular)",
-        design: "UI/UX Design",
-        prototyping: "Prototyping (Figma, Adobe XD)",
-        webAnimations: "Web Animations (CSS, GSAP)",
-        webAccessibility: "Web Accessibility (WCAG)",
-        multimedia: "Multimedia (Online Audio/Video)",
-        projectManagement: "Project Management (Trello, Jira, Asana)",
-        socialAwareness: "Social Awareness",
-        inclusionDiversity: "Inclusion & Diversity",
-        ecoResponsibility: "Digital Eco-Responsibility",
-        digitalEthics: "Digital Ethics",
-        inclusiveCommunication: "Inclusive Communication",
-        workEthic: "Work Ethic",
-        detailOrientation: "Attention to Detail",
-        french: "French",
-        english: "English",
-        japanese: "Japanese",
-        mothersTongue: "native language",
-        advanced: "advanced (C1)",
-        beginner: "beginner (since 2025)",
       },
       contact: {
         title: "Interested in collaborating on a project\u00A0?",
