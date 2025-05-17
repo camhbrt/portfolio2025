@@ -25,6 +25,10 @@
   @apply bg-neutral-100/80 dark:bg-neutral-800/80 border border-neutral-300 dark:border-neutral-600 rounded-md;
 }
 
+.border-custom {
+  @apply border-neutral-300 dark:border-neutral-600 rounded-lg;
+}
+
 html {
   scrollbar-gutter: stable;
 }

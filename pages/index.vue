@@ -39,16 +39,6 @@
           {{ t("home.job") }}
         </h1>
         <p class="text-pretty text-lg/relaxed">{{ t("home.description") }}</p>
-
-        <UButton
-          :label="t('home.resume')"
-          color="neutral"
-          variant="outline"
-          size="xl"
-          target="_blank"
-          :to="'/camille_hebert.pdf'"
-          class="px-12 w-fit self-center"
-        />
       </div>
     </section>
 

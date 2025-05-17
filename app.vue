@@ -130,7 +130,7 @@
       <NuxtPage class="max-w-[1200px] xl:w-[1200px] flex-grow mx-8 xl:mx-auto" />
 
       <!-- Footer Desktop-->
-      <footer class="bottom-0 w-full border-t mt-16 sm:py-4 text-sm">
+      <footer class="bottom-0 w-full border-t border-custom mt-16 sm:py-4 text-sm">
         <p class="hidden sm:block text-center text-dimmed dark:text-neutral-400">
           {{ t("layout.footer") }} - {{ currentDate.getFullYear() }}
         </p>

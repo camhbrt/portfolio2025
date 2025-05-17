@@ -23,7 +23,7 @@
     :ui="{ content: 'w-96 xl:w-[500px] pr-4' }"
   >
     <button
-      class="relative w-full h-64 rounded-xl overflow-hidden bg-cover bg-center border border-custom group"
+      class="cursor-pointer relative w-full h-64 rounded-xl overflow-hidden bg-cover bg-center border border-custom group shadow-2xl shadow-neutral-200 dark:shadow-neutral-900 hover:shadow-primary-200 hover:dark:shadow-primary-950 transition-shadow ease-in-out duration-300"
       :style="{ backgroundImage: `url(${image})` }"
     >
       <!-- Overlay dégradé -->
