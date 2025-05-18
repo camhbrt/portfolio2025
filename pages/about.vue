@@ -69,7 +69,7 @@
     <!-- 1. Resume section -->
     <section>
       <h1 class="text-center text-6xl font-bold">About me</h1>
-      <UStepper orientation="vertical" :items="stepperItems" class="max-md:hidden" size="lg">
+      <UStepper orientation="vertical" :items="stepperItems" size="lg">
         <template #description="{ item }">
           <div v-html="item.descriptionHtml" />
         </template>
