@@ -51,6 +51,15 @@
   onMounted(() => {
     currentWindow.value = window;
   });
+
+  /**
+   * Sets the lang attribute in the html tag
+   */
+  useHead({
+    htmlAttrs: {
+      lang: locale.value,
+    },
+  });
 </script>
 
 <template>
