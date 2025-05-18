@@ -7,6 +7,10 @@ export default defineNuxtConfig({
     },
   },
 
+  colorMode: {
+    preference: "dark",
+  },
+
   compatibilityDate: "2024-11-01",
 
   css: ["~/assets/css/main.css"],
@@ -22,12 +26,6 @@ export default defineNuxtConfig({
   modules: ["@nuxt/image", "@nuxt/ui", "@nuxt/icon", "@nuxt/eslint", "@nuxtjs/i18n"],
 
   ssr: true,
-
-  // ui: {
-  //   theme: {
-  //     colors: ["primary", "secondary", "tertiary", "info", "success", "warning", "error"],
-  //   },
-  // },
 
   vite: {
     plugins: [tailwindcss()],

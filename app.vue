@@ -10,18 +10,30 @@
     {
       label: t("layout.home"),
       to: localePath("/"),
+      onSelect: () => {
+        isMobileMenuOpen.value = false;
+      },
     },
     {
       label: t("layout.about"),
       to: localePath("/about"),
+      onSelect: () => {
+        isMobileMenuOpen.value = false;
+      },
     },
     {
       label: t("layout.projects"),
       to: localePath("/projects"),
+      onSelect: () => {
+        isMobileMenuOpen.value = false;
+      },
     },
     {
       label: t("layout.contact"),
       to: localePath("/contact"),
+      onSelect: () => {
+        isMobileMenuOpen.value = false;
+      },
     },
   ];
 
@@ -29,9 +41,12 @@
    * Set the theme based on the current color mode.
    */
   const colorMode = useColorMode();
-  const setTheme = () => {
-    colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
-  };
+  const isColorMode = computed({
+    get: () => colorMode.value === "dark",
+    set: (val) => {
+      colorMode.preference = val ? "dark" : "light";
+    },
+  });
 
   /**
    * Hide the header when scrolling down and show it when scrolling up.
@@ -76,32 +91,54 @@
           <span class="whitespace-nowrap text-sm xxs:text-base">Camille Hébert</span>
         </NuxtLink>
         <!-- Main navigation -->
-        <UNavigationMenu orientation="horizontal" :items="menu" class="hidden sm:block w-fit" />
-        <div class="flex">
+        <UNavigationMenu
+          orientation="horizontal"
+          :items="menu"
+          class="hidden sm:block w-fit"
+          highlight
+          variant="link"
+          :ui="{ link: 'text-md' }"
+        />
+        <div class="flex gap-1">
           <!-- Color mode button -->
-          <UButton
-            :icon="
-              colorMode.value === 'dark' ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'
-            "
-            color="neutral"
-            variant="ghost"
-            :aria-label="t('layout.themeSelect')"
-            @click="setTheme"
-          />
+          <UTooltip :text="t('layout.themeSelect')">
+            <USwitch
+              v-model="isColorMode"
+              :aria-label="t('layout.themeSelect')"
+              unchecked-icon="i-heroicons-sun-20-solid"
+              checked-icon="i-heroicons-moon-20-solid"
+              color="primary"
+              size="xl"
+              class="my-auto"
+              :ui="{
+                icon: 'bg-inverted',
+                base: 'outline outline-custom cursor-pointer focus-visible:ring-2 focus-visible:ring-primary',
+              }"
+            />
+          </UTooltip>
           <!-- Locale change button -->
-          <UButton
-            color="neutral"
-            variant="ghost"
-            :aria-label="t('layout.langSelect')"
-            :label="t('layout.lang')"
-            @click="setLocale(locale === 'fr' ? 'en' : 'fr')"
-          />
+          <UTooltip :text="t('layout.langSelect')">
+            <UButton
+              color="neutral"
+              variant="ghost"
+              :aria-label="t('layout.langSelect')"
+              :label="t('layout.lang')"
+              :tooltip="t('layout.langSelect')"
+              class="cursor-pointer focus-visible:ring-2 focus-visible:ring-primary"
+              @click="setLocale(locale === 'fr' ? 'en' : 'fr')"
+            />
+          </UTooltip>
           <!-- Mobile drawer -->
           <UDrawer
             v-model:open="isMobileMenuOpen"
             direction="right"
             class="sm:hidden"
             :ui="{ content: 'z-20', overlay: 'z-10' }"
+            :content="{
+              trapfocus: true,
+            }"
+            title="Menu"
+            description="Sélectionnez une page"
           >
             <!-- Button to open the drawer -->
             <UButton
@@ -109,6 +146,7 @@
               color="neutral"
               variant="ghost"
               :aria-label="t('layout.showMenu')"
+              class="cursor-pointer focus-visible:ring-2 focus-visible:ring-primary"
             />
             <!-- Drawer content -->
             <template #body>
