@@ -134,9 +134,6 @@
             direction="right"
             class="sm:hidden"
             :ui="{ content: 'z-20', overlay: 'z-10' }"
-            :content="{
-              trapfocus: true,
-            }"
             title="Menu"
             description="Sélectionnez une page"
           >
