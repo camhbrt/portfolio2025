@@ -6,7 +6,7 @@
   const localePath = useLocalePath();
   const isMobileMenuOpen = ref(false);
   const currentDate = new Date();
-  const menu = [
+  const menu = computed(() => [
     {
       label: t("layout.home"),
       to: localePath("/"),
@@ -35,7 +35,7 @@
         isMobileMenuOpen.value = false;
       },
     },
-  ];
+  ]);
 
   /**
    * Set the theme based on the current color mode.
