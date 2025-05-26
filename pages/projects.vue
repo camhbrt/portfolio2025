@@ -22,7 +22,9 @@
         icon: "i-mdi:gitlab",
       },
       url: "https://boukin.adaschool.fr/register",
-      image: "/boukin-mini.png",
+      image: "/projet-boukin.webp",
+      alt: "Capture d'écran de l'application Boukin",
+      thumbnail: "/Fresh_Folk_Composition.svg",
     },
     {
       title: "Netatmo",
@@ -31,7 +33,9 @@
       description:
         "Durant mes deux années chez Netatmo, l'un de mes projets majeurs a été la refonte et la maintenance du site vitrine de la marque, en collaboration avec l'équipe marketing et UX. Missions principales Développement Frontend : Création et intégration de composants UI réutilisables en Nuxt 3 et TypeScript, enrichissant la librairie Storybook. Mise en place d'animations interactives et fluides avec GSAP pour améliorer l'expérience utilisateur. Gestion des contenus : Connexion aux données via Directus et GraphQL, permettant à l'équipe marketing de gérer le contenu en toute autonomie. Collaboration & Agilité : Travail en équipe avec 3 développeurs, l'équipe marketing et l'UX designer, en méthodologie agile. Maintenance & Évolution : De septembre 2024 à mai 2025, j’ai été la principale mainteneuse du site, développant de nouvelles fonctionnalités et optimisant les performances. J’ai également accompagné l’équipe marketing dans l’utilisation de Directus pour la gestion des contenus.",
       url: "https://www.netatmo.com",
-      image: "/netatmo-mini.png",
+      image: "/projet-netatmo.webp",
+      alt: "Capture d'écran du site vitrine Netatmo",
+      thumbnail: "/Fresh_Folk_Evergreen.svg",
     },
     {
       title: "Portfolio",
@@ -43,7 +47,9 @@
         link: "https://github.com/camhbrt/portfolio2025",
         icon: "i-mdi:github",
       },
-      image: "/",
+      image: "/projet-portfolio.webp",
+      alt: "Capture d'écran de mon portfolio",
+      thumbnail: "/Fresh_Folk_Monstera.svg",
     },
     {
       title: "Mystery Quest",
@@ -55,7 +61,9 @@
         link: "https://github.com/camhbrt/MysteryQuest",
         icon: "i-mdi:github",
       },
-      image: "/mystery-mini.png",
+      image: "/projet-mystery.webp",
+      alt: "Captures d'écran de l'application Mystery Quest",
+      thumbnail: "/Fresh_Folk_Tiny_Leaf.svg",
     },
     {
       title: "Amelia's Castle",
@@ -68,7 +76,9 @@
         icon: "i-mdi:github",
       },
       url: "https://www.lexaloffle.com/bbs/?tid=52831",
-      image: "/amelias-mini.png",
+      image: "/projet-amelia.webp",
+      alt: "Capture d'écran du jeu Amelia's Castle",
+      thumbnail: "/Fresh_Folk_Snake_Plant.svg",
     },
   ];
 </script>
@@ -77,7 +87,7 @@
     <ul
       class="row-start-2 col-start-2 -col-end-2 lg:col-start-3 lg:-col-end-3 grid gap-6 md:grid-cols-2 mt-12"
     >
-      <li v-for="project in data" :key="project.title" class="">
+      <li v-for="project in data" :key="project.title">
         <ProjectCard v-bind="project" />
       </li>
     </ul>

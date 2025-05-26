@@ -25,12 +25,12 @@
     <!--  -->
     <section class="grid grid-cols-12 my-20">
       <NuxtImg
-        src="/portrait.svg"
+        src="/portrait.webp"
         alt="Portrait de Camille Hébert"
-        class="col-start-1 -col-end-1 xs:col-start-3 xs:-col-end-3 md:row-start-1 md:col-start-1 md:col-end-6 my-4 md:my-auto"
+        class="col-start-1 -col-end-1 xs:col-start-3 xs:-col-end-3 md:row-start-1 md:col-start-1 md:col-end-6 my-4 md:my-auto lg:col-start-2 aspect-square rounded-[43%]"
       />
       <div
-        class="col-start-1 -col-end-1 md:-col-end-1 md:col-start-7 md:my-auto flex flex-col gap-y-10 mt-12"
+        class="col-start-1 -col-end-1 md:-col-end-1 md:col-start-7 md:my-auto lg:-col-end-2 flex flex-col gap-y-10 mt-12"
       >
         <p class="text-2xl font-bold">
           {{ t("home.name") }}

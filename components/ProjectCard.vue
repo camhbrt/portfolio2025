@@ -11,6 +11,7 @@
     };
     url?: string;
     image?: string;
+    thumbnail?: string;
     alt?: string;
   }>();
 
@@ -24,11 +25,11 @@
   >
     <button
       class="cursor-pointer relative w-full h-64 rounded-xl overflow-hidden bg-cover bg-center border border-custom group shadow-2xl shadow-neutral-200 dark:shadow-neutral-900 hover:shadow-primary-200 hover:dark:shadow-primary-950 transition-shadow ease-in-out duration-300"
-      :style="{ backgroundImage: `url(${image})` }"
+      :style="{ backgroundImage: `url(${thumbnail})` }"
     >
       <!-- Overlay dégradé -->
       <div
-        class="absolute inset-0 bg-linear-to-t from-black via-black/70 to-black/10 group-hover:backdrop-blur-xs group-focus:backdrop-blur-xs transition-transform duration-500 ease-in-out"
+        class="absolute inset-0 bg-linear-to-t from-black/80 via-black/50 to-transparent group-hover:backdrop-blur-xs group-focus:backdrop-blur-xs transition-transform duration-500 ease-in-out"
       />
 
       <!-- Card content -->
