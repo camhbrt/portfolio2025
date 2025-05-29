@@ -63,10 +63,6 @@
         </li>
       </ul>
 
-      <NuxtImg :src="image" :alt="alt" class="rounded-xl my-8 border border-custom" />
-
-      <p v-html="description" />
-
       <div v-if="repository || url" class="flex my-8 flex-wrap justify-center gap-8">
         <UButton
           v-if="repository"
@@ -91,6 +87,10 @@
           trailing-icon="i-mdi:open-in-new"
         />
       </div>
+
+      <NuxtImg :src="image" :alt="alt" class="rounded-xl my-8 border border-custom" />
+
+      <p v-html="description" />
     </template>
   </UDrawer>
 </template>
