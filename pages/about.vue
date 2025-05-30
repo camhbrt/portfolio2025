@@ -20,17 +20,17 @@
   ];
 
   const hardSkills = [
-    { label: "TypeScript", icon: "i-logos-typescript-icon" },
-    { label: "Nuxt", icon: "i-logos-nuxt-icon" },
-    { label: "Vue", icon: "i-logos-vue" },
-    { label: "Tailwind", icon: "i-logos-tailwindcss-icon" },
+    { label: "TypeScript", icon: "i-mdi-language-typescript" },
+    { label: "Nuxt", icon: "i-mdi-nuxt" },
+    { label: "Vue", icon: "i-mdi-vuejs" },
+    { label: "Tailwind", icon: "i-mdi-tailwind" },
     { label: "Pinia", icon: "i-logos-pinia" },
     { label: "Directus", icon: "i-simple-icons-directus" },
-    { label: "Storybook", icon: "i-logos-storybook-icon" },
-    { label: "GraphQL", icon: "i-logos-graphql" },
+    { label: "Storybook", icon: "i-cib-storybook" },
+    { label: "GraphQL", icon: "i-mdi-graphql" },
     { label: "Shadcn", icon: "i-simple-icons-shadcnui" },
-    { label: "Vitest", icon: "i-logos-vitest" },
-    { label: "Figma", icon: "i-logos-figma" },
+    { label: "Vitest", icon: "i-simple-icons-vitest" },
+    { label: "Figma", icon: "i-simple-icons-figma" },
   ];
 
   const softSkills = {
