@@ -1,21 +1,24 @@
 <script setup lang="ts">
   const { t } = useI18n();
 
-  const stepperItems = [
+  const resume = [
     {
       icon: "i-lucide-music",
       title: t("about.stepper.teaching.title"),
       descriptionHtml: t("about.stepper.teaching.descriptionHtml"),
+      image: "/Ola_standing.svg",
     },
     {
       icon: "i-pajamas:retry",
       title: t("about.stepper.reconversion.title"),
       descriptionHtml: t("about.stepper.reconversion.descriptionHtml"),
+      image: "/Ola_relaxing.svg",
     },
     {
       icon: "i-lucide-code-xml",
       title: t("about.stepper.development.title"),
       descriptionHtml: t("about.stepper.development.descriptionHtml"),
+      image: "/Ola_home_office.svg",
     },
   ];
 
@@ -66,28 +69,28 @@
 
 <template>
   <main>
-    <!-- 1. Resume section -->
-    <section>
-      <h1 class="text-center text-6xl font-bold">About me</h1>
-      <UStepper orientation="vertical" :items="stepperItems" size="lg">
-        <template #description="{ item }">
-          <div v-html="item.descriptionHtml" />
-        </template>
-      </UStepper>
-    </section>
+    <!-- Resume section -->
+    <TextImageSection
+      v-for="(item, index) in resume"
+      :key="index"
+      :title="item.title"
+      :image="item.image"
+      :description="item.descriptionHtml"
+      :is-image-left="index % 2 === 0"
+    />
 
-    <!-- 2. Stack section -->
+    <!-- Stack section -->
     <section class="my-20">
       <h2 class="text-4xl font-bold mb-10 text-center">Mes outils</h2>
-      <ul class="flex flex-wrap gap-12 justify-center bg-muted border border-custom p-6">
+      <ul class="flex flex-wrap gap-6 xs:gap-12 justify-center bg-muted border border-custom p-6">
         <li v-for="skill in hardSkills" :key="skill.label" class="flex gap-2">
-          <UIcon :name="skill.icon" class="size-10 saturate-0" />
-          <p class="font-semibold text-2xl">{{ skill.label }}</p>
+          <UIcon :name="skill.icon" class="size-8 xs:size-10 saturate-0" />
+          <p class="font-semibold text-xl xs:text-2xl">{{ skill.label }}</p>
         </li>
       </ul>
     </section>
 
-    <!-- 3. Soft skills section -->
+    <!-- Soft skills section -->
     <TextCardSection v-bind="softSkills" :is-title-centered="true" />
   </main>
 </template>

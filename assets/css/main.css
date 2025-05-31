@@ -12,9 +12,15 @@
 :root {
   --ui-border: var(--ui-color-neutral-300);
   --ui-color-primary-500: #0b95da;
+  /* --ui-bg: var(--color-warning-100); */
 }
 .dark {
   --ui-border: var(--color-neutral-600);
+  /* --ui-bg: var(--color-neutral-900); */
+}
+
+.title-md {
+  @apply text-3xl xxs:text-4xl font-bold;
 }
 
 .blurry-card {
